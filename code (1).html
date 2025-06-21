@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>副業エージェント.jp | 1ヶ月で副業スタート可能！LINEで無料相談</title>
+    <meta name="description" content="週1時間からでもOK！アイディア出しから運営代行まで丸投げも可能な、新しい形の副業エージェントサービスです。まずはLINEで無料相談から。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- 全体設定・基本スタイル --- */
+        :root {
+            --color-navy: #0a2463;
+            --color-yellow: #ffc107;
+            --color-green: #06C755;
+            --color-text: #333333;
+            --color-bg: #f7f9fc;
+            --font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            color: var(--color-text);
+            background-color: #fff;
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--color-navy);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-yellow);
+            margin: 15px auto 0;
+        }
+
+        /* --- ボタン・CTA --- */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button.green {
+            background-color: var(--color-green);
+            color: #fff;
+        }
+
+        .cta-button.navy {
+            background-color: var(--color-navy);
+            color: #fff;
+        }
+        
+        .cta-button::before {
+            content: '✓'; /* LINEアイコンの代用 */
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* --- 1. ヒーローセクション --- */
+        #hero {
+            background-color: #fff;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        #hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #hero .hero-image {
+            width: 45%;
+            text-align: center;
+        }
+
+        #hero .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            object-fit: cover;
+            aspect-ratio: 4 / 5;
+        }
+
+        #hero .hero-text {
+            width: 50%;
+        }
+        
+        #hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--color-navy);
+            line-height: 1.4;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        #hero .hero-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        #hero .hero-benefits li {
+            background-color: var(--color-bg);
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        #hero .hero-benefits li::before {
+            content: '✔';
+            color: var(--color-yellow);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        #hero .cta-area {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        #hero .cta-area .cta-button {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        #hero .cta-area p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        /* --- 2. ターゲット共感セクション --- */
+        #empathy {
+            background-color: var(--color-bg);
+        }
+
+        #empathy .empathy-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        #empathy .empathy-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            width: 48%;
+            box-sizing: border-box;
+        }
+        
+        #empathy .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--color-navy);
+        }
+        
+        #empathy .card-title span {
+            background: linear-gradient(transparent 60%, var(--color-yellow) 60%);
+            padding: 0 5px;
+        }
+        
+        #empathy .card-text {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+
+        /* --- 3. ベネフィットセクション --- */
+        #benefits .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        #benefits .benefit-item {
+            background-color: #fff;
+            padding: 30px;
+            border: 2px solid var(--color-bg);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        #benefits .benefit-item:hover {
+            border-color: var(--color-yellow);
+            transform: translateY(-5px);
+        }
+
+        #benefits .benefit-icon {
+            font-size: 3rem;
+            color: var(--color-navy);
+            margin-bottom: 15px;
+        }
+
+        #benefits .benefit-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+        }
+
+        /* --- 4. 他社比較表 --- */
+        #comparison {
+            background-color: var(--color-bg);
+        }
+        
+        #comparison .table-wrapper {
+            overflow-x: auto; /* スマホで横スクロール */
+        }
+
+        #comparison table {
+            width: 100%;
+            min-width: 600px; /* 横スクロールを発生させる最小幅 */
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #comparison th, #comparison td {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        #comparison th {
+            background-color: var(--color-navy);
+            color: #fff;
+            font-weight: 700;
+        }
+
+        #comparison td {
+            font-size: 1.1rem;
+        }
+        
+        #comparison .our-service {
+            background-color: #fffaf0;
+        }
+        
+        #comparison .our-service td:first-child {
+            font-weight: bold;
+            color: var(--color-navy);
+        }
+
+        #comparison .symbol-circle {
+            color: var(--color-yellow);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        #comparison .symbol-triangle {
+            color: #aaa;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        #comparison .symbol-cross {
+            color: #ccc;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* --- 5. 体験者の声セクション (修正) --- */
+        #testimonials .testimonials-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        #testimonials .testimonial-card {
+            background-color: var(--color-bg);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #testimonials .testimonial-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+        }
+
+        #testimonials .testimonial-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* --- 6. スタートまでのフロー --- */
+        #flow {
+            background-color: #fff;
+        }
+        
+        #flow .flow-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        #flow .flow-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            bottom: 20px;
+            width: 4px;
+            background-color: var(--color-bg);
+            z-index: 0;
+        }
+
+        #flow .flow-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 40px;
+        }
+        
+        #flow .flow-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            background-color: var(--color-navy);
+            color: #fff;
+            border-radius: 50%;
+            font-weight: 700;
+            z-index: 1;
+        }
+        
+        #flow .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 5px;
+        }
+        
+        /* --- 7. よくある質問 --- */
+        #faq {
+            background-color: var(--color-bg);
+        }
+        
+        #faq .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        #faq .faq-item {
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        #faq .faq-q {
+            padding: 20px 30px;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        #faq .faq-q::before {
+            content: 'Q';
+            color: var(--color-navy);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            font-weight: 800;
+        }
+        
+        #faq .faq-a {
+            padding: 20px 30px;
+            background-color: #fdfdfd;
+            border-top: 1px solid #eee;
+            position: relative;
+        }
+        
+        #faq .faq-a::before {
+            content: 'A';
+            color: var(--color-yellow);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            font-weight: 800;
+        }
+
+        /* --- 8. フッター & CTA再掲 --- */
+        #footer-cta {
+            background-color: var(--color-navy);
+            color: #fff;
+            text-align: center;
+        }
+        
+        #footer-cta .section-title {
+            color: #fff;
+        }
+        
+        #footer-cta .section-title::after {
+            background-color: var(--color-yellow);
+        }
+        
+        #footer-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        
+        #footer-cta .cta-area p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #eee;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- レスポンシブ対応 --- */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+
+            /* ヒーロー */
+            #hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #hero .hero-image,
+            #hero .hero-text {
+                width: 100%;
+            }
+            
+            #hero .hero-image {
+                margin-bottom: 30px;
+            }
+
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+
+            /* 共感 */
+            #empathy .empathy-cards {
+                flex-direction: column;
+            }
+
+            #empathy .empathy-card {
+                width: 100%;
+            }
+            
+            /* フロー */
+            #flow .flow-steps::before {
+                left: 17px;
+            }
+            #flow .flow-step {
+                padding-left: 50px;
+            }
+            #flow .flow-step::before {
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+            }
+            
+            /* FAQ */
+            #faq .faq-q, #faq .faq-a {
+                padding: 15px 20px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. ヒーローセクション (画像修正) -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=800&auto=format&fit=crop" alt="副業をサポートする親しみやすいエージェント">
+            </div>
+            <div class="hero-text">
+                <h1>
+                    あなたの「やりたい」を<br>
+                    最短で収益化する<br>
+                    副業エージェント.jp
+                </h1>
+                <ul class="hero-benefits">
+                    <li>1ヶ月で副業スタート可能</li>
+                    <li>週1時間〜でもOK</li>
+                    <li>丸投げ代行も選べる</li>
+                </ul>
+                <div class="cta-area">
+                    <a href="#line" class="cta-button green">LINEで無料相談する</a>
+                    <p>相談だけでもOK！無理な勧誘は一切ありません。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- 2. ターゲット共感セクション -->
+        <section id="empathy">
+            <div class="container">
+                <h2 class="section-title">こんなお悩みありませんか？</h2>
+                <div class="empathy-cards">
+                    <div class="empathy-card">
+                        <h3 class="card-title"><span>考えてはいたけど、<br>なかなか踏み出せない</span>あなたへ</h3>
+                        <p class="card-text">「何から始めたらいいかわからない」「専門知識がなくて不安」「面倒な手続きが多そう…」<br>そんな方こそ、私たちの出番です。</p>
+                    </div>
+                    <div class="empathy-card">
+                        <h3 class="card-title"><span>本業が忙しくて、<br>時間がない</span>あなたへ</h3>
+                        <p class="card-text">「もっと収入を増やしたいけど時間がない」「効率よく副業を進めたい」「誰かに手伝ってほしい…」<br>そんな方こそ、私たちを頼ってください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ベネフィットセクション -->
+        <section id="benefits">
+            <div class="container">
+                <h2 class="section-title">副業エージェント.jpが提供する<br>一気通貫支援</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💡</div>
+                        <h3 class="benefit-title">アイディア出し</h3>
+                        <p>あなたの興味やスキルに合わせた副業アイディアを一緒に考え、提案します。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💬</div>
+                        <h3 class="benefit-title">壁打ち相談</h3>
+                        <p>事業計画や不安な点を専門エージェントに何度でも相談できます。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📋</div>
+                        <h3 class="benefit-title">準備サポート</h3>
+                        <p>事業計画書の作成から必要なツールの導入まで、面倒な準備をサポートします。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚙️</div>
+                        <h3 class="benefit-title">運営代行</h3>
+                        <p>SNS運用や顧客対応など、日々のタスクを丸投げできるプランもご用意。</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🤝</div>
+                        <h3 class="benefit-title">事業譲渡</h3>
+                        <p>育てた副業を売却したい場合も、専門家が徹底サポートします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 他社比較表 -->
+        <section id="comparison">
+            <div class="container">
+                <h2 class="section-title">他社サービスとの違い</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>副業エージェント.jp</th>
+                                <th>他社A<br>(スクール)</th>
+                                <th>他社B<br>(コンサル)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="our-service">
+                                <td>アイディア提案</td>
+                                <td><span class="symbol-circle">○</span></td>
+                                <td><span class="symbol-cross">×</span></td>
+                                <td><span class="symbol-triangle">△</span></td>
+                            </tr>
+                            <tr>
+                                <td>壁打ち相談</td>
+                                <td><span class="symbol-circle">○</span></td>
+                                <td><span class="symbol-triangle">△</span></td>
+                                <td><span class="symbol-cross">×</span></td>
+                            </tr>
+                            <tr class="our-service">
+                                <td>運営代行</td>
+                                <td><span class="symbol-circle">○</span></td>
+                                <td><span class="symbol-cross">×</span></td>
+                                <td><span class="symbol-cross">×</span></td>
+                            </tr>
+                            <tr>
+                                <td>事業譲渡</td>
+                                <td><span class="symbol-circle">○</span></td>
+                                <td><span class="symbol-cross">×</span></td>
+                                <td><span class="symbol-cross">×</span></td>
+                            </tr>
+                            <tr class="our-service">
+                                <td>スピード感</td>
+                                <td><strong>1ヶ月以内</strong></td>
+                                <td>数ヶ月</td>
+                                <td>未定</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 体験者の声セクション (画像削除) -->
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">ご利用者様の声</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <h3 class="testimonial-title">「初めてでも安心して副業をスタートできました！」</h3>
+                            <p class="testimonial-meta">A.Sさん / 20代 / 会社員</p>
+                            <p>何から手をつけていいか分からなかったのですが、アイディア出しから親身に相談に乗ってくれて、1ヶ月後には自分のサービスをリリースできました。本当に感謝しています。</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <h3 class="testimonial-title">「忙しい中でも『運営代行』のおかげで収益化！」</h3>
+                            <p class="testimonial-meta">K.Tさん / 30代 / マネージャー職</p>
+                            <p>本業が忙しく、副業に時間を割けないのが悩みでした。運営代行プランでSNSの更新や顧客対応をお任せできるので、無理なく収入の柱をもう一つ作ることができました。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. スタートまでのフロー -->
+        <section id="flow">
+            <div class="container">
+                <h2 class="section-title">スタートまでの簡単4ステップ</h2>
+                <ol class="flow-steps">
+                    <li class="flow-step">
+                        <h3 class="step-title">STEP1：LINE登録</h3>
+                        <p>まずはページ下部のボタンからLINE公式アカウントを友だち追加してください。</p>
+                    </li>
+                    <li class="flow-step">
+                        <h3 class="step-title">STEP2：無料ヒアリング</h3>
+                        <p>LINEにて簡単なアンケートにお答えいただき、無料相談の日程を調整します。</p>
+                    </li>
+                    <li class="flow-step">
+                        <h3 class="step-title">STEP3：壁打ち・ご提案</h3>
+                        <p>専門のエージェントがあなたの希望を伺い、最適な副業プランをご提案します。</p>
+                    </li>
+                    <li class="flow-step">
+                        <h3 class="step-title">STEP4：サポート開始</h3>
+                        <p>ご納得いただけたら契約となり、最短で副業の実行・運営サポートを開始します。</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 7. よくある質問 -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">よくあるご質問</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-q">未経験でも大丈夫ですか？</div>
+                        <div class="faq-a">全く問題ありません。副業エージェント.jpは、アイディア探しからサポートする完全伴走型のサービスです。専門知識がない方でも安心してご相談ください。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">運営を丸投げすることはできますか？</div>
+                        <div class="faq-a">はい、可能です。お忙しい方向けに、SNS運用や事務作業などを一括で代行するプランもご用意しております。無料相談の際に詳しくご説明します。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">費用はどのくらいかかりますか？</div>
+                        <div class="faq-a">サポート内容に応じて複数のプランをご用意しております。まずは無料相談にてあなたの状況やご希望を伺い、最適なお見積もりを提示させていただきます。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. フッターCTA -->
+        <section id="footer-cta">
+            <div class="container">
+                <h2 class="section-title">さあ、あなたも一歩踏み出しませんか？</h2>
+                <p>
+                    まずは無料相談から、あなたの可能性を一緒に探しましょう。<br>
+                    専門のエージェントが、あなただけの副業プランをご提案します。
+                </p>
+                <div class="cta-area">
+                    <a href="#line" id="line" class="cta-button green">LINEで無料相談する</a>
+                    <p>相談後、無理な勧誘は一切いたしません。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター (コピーライト修正) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 副業エージェント.jp All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
