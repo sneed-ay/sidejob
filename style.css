@@ -1,0 +1,524 @@
+/* --- 全体設定・基本スタイル --- */
+:root {
+    --color-navy: #0a2463;
+    --color-yellow: #ffc107;
+    --color-green: #06C755;
+    --color-text: #333333;
+    --color-bg: #f7f9fc;
+    --font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: #fff;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--color-navy);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-yellow);
+    margin: 15px auto 0;
+}
+
+/* --- ボタン・CTA --- */
+.cta-button {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.green {
+    background-color: var(--color-green);
+    color: #fff;
+}
+
+.cta-button.navy {
+    background-color: var(--color-navy);
+    color: #fff;
+}
+
+.cta-button::before {
+    content: '✓'; /* LINEアイコンの代用 */
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* --- 1. ヒーローセクション --- */
+#hero {
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero .hero-image {
+    width: 45%;
+    text-align: center;
+}
+
+#hero .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}
+
+#hero .hero-text {
+    width: 50%;
+}
+
+#hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--color-navy);
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#hero .hero-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+#hero .hero-benefits li {
+    background-color: var(--color-bg);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+#hero .hero-benefits li::before {
+    content: '✔';
+    color: var(--color-yellow);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+#hero .cta-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#hero .cta-area .cta-button {
+    width: 100%;
+    max-width: 400px;
+}
+
+#hero .cta-area p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* --- 2. ターゲット共感セクション --- */
+#empathy {
+    background-color: var(--color-bg);
+}
+
+#empathy .empathy-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#empathy .empathy-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 48%;
+    box-sizing: border-box;
+}
+
+#empathy .card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-navy);
+}
+
+#empathy .card-title span {
+    background: linear-gradient(transparent 60%, var(--color-yellow) 60%);
+    padding: 0 5px;
+}
+
+#empathy .card-text {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/* --- 3. ベネフィットセクション --- */
+#benefits .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+#benefits .benefit-item {
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid var(--color-bg);
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+#benefits .benefit-item:hover {
+    border-color: var(--color-yellow);
+    transform: translateY(-5px);
+}
+
+#benefits .benefit-icon {
+    font-size: 3rem;
+    color: var(--color-navy);
+    margin-bottom: 15px;
+}
+
+#benefits .benefit-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 10px;
+}
+
+/* --- 4. 他社比較表 --- */
+#comparison {
+    background-color: var(--color-bg);
+}
+
+#comparison .table-wrapper {
+    overflow-x: auto; /* スマホで横スクロール */
+}
+
+#comparison table {
+    width: 100%;
+    min-width: 600px; /* 横スクロールを発生させる最小幅 */
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#comparison th, #comparison td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+#comparison th {
+    background-color: var(--color-navy);
+    color: #fff;
+    font-weight: 700;
+}
+
+#comparison td {
+    font-size: 1.1rem;
+}
+
+#comparison .our-service {
+    background-color: #fffaf0;
+}
+
+#comparison .our-service td:first-child {
+    font-weight: bold;
+    color: var(--color-navy);
+}
+
+#comparison .symbol-circle {
+    color: var(--color-yellow);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#comparison .symbol-triangle {
+    color: #aaa;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#comparison .symbol-cross {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* --- 5. 体験者の声セクション (修正) --- */
+#testimonials .testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#testimonials .testimonial-card {
+    background-color: var(--color-bg);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#testimonials .testimonial-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 10px;
+}
+
+#testimonials .testimonial-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* --- 6. スタートまでのフロー --- */
+#flow {
+    background-color: #fff;
+}
+
+#flow .flow-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#flow .flow-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 4px;
+    background-color: var(--color-bg);
+    z-index: 0;
+}
+
+#flow .flow-step {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+}
+
+#flow .flow-step::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background-color: var(--color-navy);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    z-index: 1;
+}
+
+#flow .step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 5px;
+}
+
+/* --- 7. よくある質問 --- */
+#faq {
+    background-color: var(--color-bg);
+}
+
+#faq .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#faq .faq-item {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+#faq .faq-q {
+    padding: 20px 30px;
+    font-weight: 700;
+    position: relative;
+}
+
+#faq .faq-q::before {
+    content: 'Q';
+    color: var(--color-navy);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    font-weight: 800;
+}
+
+#faq .faq-a {
+    padding: 20px 30px;
+    background-color: #fdfdfd;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+
+#faq .faq-a::before {
+    content: 'A';
+    color: var(--color-yellow);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    font-weight: 800;
+}
+
+/* --- 8. フッター & CTA再掲 --- */
+#footer-cta {
+    background-color: var(--color-navy);
+    color: #fff;
+    text-align: center;
+}
+
+#footer-cta .section-title {
+    color: #fff;
+}
+
+#footer-cta .section-title::after {
+    background-color: var(--color-yellow);
+}
+
+#footer-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+#footer-cta .cta-area p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #eee;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+
+    /* ヒーロー */
+    #hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero .hero-image,
+    #hero .hero-text {
+        width: 100%;
+    }
+    
+    #hero .hero-image {
+        margin-bottom: 30px;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* 共感 */
+    #empathy .empathy-cards {
+        flex-direction: column;
+    }
+
+    #empathy .empathy-card {
+        width: 100%;
+    }
+    
+    /* フロー */
+    #flow .flow-steps::before {
+        left: 17px;
+    }
+    #flow .flow-step {
+        padding-left: 50px;
+    }
+    #flow .flow-step::before {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+    }
+    
+    /* FAQ */
+    #faq .faq-q, #faq .faq-a {
+        padding: 15px 20px;
+        line-height: 1.6;
+    }
+}
